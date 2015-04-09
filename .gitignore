@@ -1,0 +1,4 @@
+*.orig
+*.pyc
+.idea/
+db.sqlite3
