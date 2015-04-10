@@ -1,10 +1,10 @@
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.conf.urls import patterns
 
-urlpatterns = [
-    # Examples:
-    # url(r'^$', 'recipe_organizer.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+urlpatterns = patterns('',
 
-    url(r'^admin/', include(admin.site.urls)),
-]
+                       url('^', include('apps.recipes.urls')),
+
+                       url(r'^admin/', include(admin.site.urls)),
+                       )
