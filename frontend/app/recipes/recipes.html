@@ -1,10 +1,15 @@
-This is what you wrote:<p>{{ myText }}</p>
-<input  ng-model="myText">
+<!--This is what you wrote:<p>{{ myText }}</p>-->
+<!--<input  ng-model="myText">-->
 
 
-<button class="btn btn-small btn-success" ng-click="getRecipes()">Press</button>
+<button ng-click="getRecipes()">Press</button>
 
 
-<ul>
-    <li ng-repeat="recipe in recipes">{{ recipe.name }}</li>
-</ul>
+<li ng-repeat="recipe in recipes"><a href="#/recipes/{{ recipe.id }}">{{ recipe.name }}</a></li>
+
+
+
+
+
+
+
