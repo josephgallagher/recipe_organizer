@@ -10,9 +10,19 @@ angular.module('myApp.recipes', ['ngRoute'])
     }])
 
     .controller('RecipesCtrl', ['$scope', 'Restangular', function ($scope, Restangular) {
-        $scope.getRecipes = function() {
-            Restangular.all('recipes').getList().then(function (recipes) {
-                $scope.recipes = recipes; //Gave scope object the attribute recipes
-            });
-        };
-    }]);
+        Restangular.all('recipes').getList().then(function (recipes) {
+            $scope.recipes = recipes;
+        });
+        }]);
+
+
+
+
+
+    //.controller('RecipesCtrl', ['$scope', 'Restangular', function ($scope, Restangular) {
+    //    $scope.getRecipes = function() {
+    //        Restangular.all('recipes').getList().then(function (recipes) {
+    //        $scope.recipes = recipes;
+    //    });
+    //    };
+    //}]);

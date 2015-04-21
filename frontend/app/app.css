@@ -28,3 +28,19 @@
   content: "";
   padding: 0;
 }
+
+/*Added by Me*/
+.btn-info {
+    color: #fff;
+    background-color: #68A6F1;
+    border-color: #46b8da;
+}
+
+
+.site-background {
+    background-image: url("../images/concrete_seamless.png");
+}
+
+.site-foreground {
+    background-color: #ffffff;
+}
