@@ -1,46 +1,70 @@
 /* app css stylesheet */
 
 .menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
 }
 
 .menu:before {
-  content: "[";
+    content: "[";
 }
 
 .menu:after {
-  content: "]";
+    content: "]";
 }
 
 .menu > li {
-  display: inline;
+    display: inline;
 }
 
 .menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+    content: "|";
+    padding-right: 0.3em;
 }
 
 .menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+    content: "";
+    padding: 0;
 }
 
+
+
 /*Added by Me*/
+
+
 .btn-info {
     color: #fff;
     background-color: #68A6F1;
     border-color: #46b8da;
 }
 
-
 .site-background {
-    background-image: url("../images/concrete_seamless.png");
+    background-image: url("../images/retina_wood_@2X.png");
 }
 
 .site-foreground {
     background-color: #ffffff;
+}
+
+.navbar{
+    margin-bottom: 0px;
+}
+
+.recipe-card{
+    background-color: #d5d5d5;
+    border-radius: 5px;
+    padding: inherit;
+    padding-top: 1px;
+    margin-top: 30px;
+}
+
+.recipe-card-image{
+    width: 100%;
+}
+
+.navbar-default {
+  background-color: transparent
+  border-color: #ffffff;
 }
