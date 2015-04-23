@@ -3,3 +3,5 @@
 .idea/
 db.sqlite3
 media/
+node_modules/
+bower_components/
