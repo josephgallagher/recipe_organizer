@@ -39,11 +39,21 @@ html, body, .container-fluid, .site-background {
     font-size: 18px;
 }
 
+
 .site-foreground {
     background-color: #d5d5d5;
     margin-top: 20px;
     border-radius: 10px;
 }
+
+
+
+.site-foreground {
+    background-color: #d5d5d5;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
 
 .site-background {
     background: url("../images/dark_embroidery.png");
@@ -75,11 +85,10 @@ html, body, .container-fluid, .site-background {
     margin-top: 30px;
 }
 
-<<<<<<< HEAD
 .recipe-card-image{
     width: 100%;
 }
-=======
+
 .recipe-card a {
     color: #9E9E9E;
 }
@@ -94,5 +103,6 @@ html, body, .container-fluid, .site-background {
     width: 150px;
     height: 150px;
     border-radius: 10px;
+
 }
->>>>>>> dev
+
