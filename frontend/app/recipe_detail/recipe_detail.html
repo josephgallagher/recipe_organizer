@@ -3,23 +3,51 @@
 
 
 
-<img ng-src="{{ recipe.photo }}" width="300" class="img-responsive">
-<div class="form-group">
-    <input type="file" id="file" name="file" accept="image/gif, image/x-png, image/jpeg"
-           onchange="angular.element(this).scope().addPhoto()"/>
-</div>
+    <div class="recipe-card">
+        <h3><a href="/app/#/recipes/{{ recipe.id }}">{{ recipe.name }}</a></h3>
+        <img width="200"
+             class="img-responsive recipe-card-image"
+             ng-src="{{ recipe.photo }}">
+        <p>{{ recipe.description }}</p>
+    </div>
+
+
+
+
+<!--<img ng-src="{{ recipe.photo }}" width="300" class="img-responsive">-->
+<!--<div class="form-group">-->
+    <!--<input type="file" id="file" name="file" accept="image/gif, image/x-png, image/jpeg"-->
+           <!--onchange="angular.element(this).scope().addPhoto()"/>-->
+<!--</div>-->
 
 
 <br>
-<p ng-hide="editing">{{ recipe.description }}</p>
+<!--<p ng-hide="editing">{{ recipe.description }}</p>-->
 <textarea ng-show="editing" ng-model="recipe.description"></textarea>
 
 
-
+<h2>Directions:</h2>
 <br>
 <p ng-hide="editing">{{ recipe.directions }}</p>
 <textarea ng-show="editing" ng-model="recipe.directions"></textarea>
 
+
+<h2>Ingredients:</h2>
+<ol>
+    <li ng-repeat="ingredient in recipe.ingredients">{{ ingredient.name }}
+        <i ng-click="removeIngredientFromRecipe(ingredient)" ng-show="editing"
+           class="btn btn-xs btn-danger glyphicon glyphicon-remove"></i>
+    </li>
+</ol>
+
+
+
+<div ng-show="editing">
+    <br>
+    <label>Ingredient:</label><br>
+    <input ng-model="ingredientName">
+    <button ng-click="addIngredientToRecipe(ingredientName)">Add Ingredient to Recipe</button>
+</div>
 
 
 <br>
@@ -43,22 +71,5 @@
 
 
 
-
-<ol>
-    <li ng-repeat="ingredient in recipe.ingredients">{{ ingredient.name }}
-        <i ng-click="removeIngredientFromRecipe(ingredient)" ng-show="editing"
-           class="btn btn-xs btn-danger glyphicon glyphicon-remove"></i>
-    </li>
-</ol>
-
-
-
-
-<div ng-show="editing">
-    <br>
-    <label>Ingredient:</label><br>
-    <input ng-model="ingredientName">
-    <button ng-click="addIngredientToRecipe(ingredientName)">Add Ingredient to Recipe</button>
-</div>
 
 

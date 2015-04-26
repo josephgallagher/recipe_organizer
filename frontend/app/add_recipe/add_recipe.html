@@ -1,4 +1,5 @@
 <!-- <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3"> -->
+<h2>Add a recipe to your book:</h2>
 <div>
     <div class="form-group">
         <label>Recipe Name:</label>
@@ -15,6 +16,15 @@
     <div class="form-group">
         <label>Recipe Description:</label>
         <textarea class="form-control" ng-model="recipe.description"></textarea>
+    </div>
+
+
+    <br>
+    <img class="img-responsive" ng-src="{{ recipe.photo }}">
+    <div class="form-group">
+        <label>Recipe Photo:</label>
+        <input type="file" id="file" name="file" accept="image/gif, image/x-png, image/jpeg"
+        onchange="angular.element(this).scope().addPhoto()"/>
     </div>
 
 
@@ -36,14 +46,10 @@
 
 
     <br>
-    <button ng-click="addRecipe()" class="btn btn-md btn-success glyphicon glyphicon-floppy-disk">Save Recipe</button>
+    <button ng-click="addRecipe()" class="btn btn-md btn-success glyphicon glyphicon-floppy-disk pull-right">Save Recipe</button>
 
 
-    <img class="img-responsive" ng-src="{{ recipe.photo }}">
-    <div class="form-group">
-        <input type="file" id="file" name="file" accept="image/gif, image/x-png, image/jpeg"
-        onchange="angular.element(this).scope().addPhoto()"/>
-    </div>
+
 
 
 
