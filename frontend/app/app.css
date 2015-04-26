@@ -46,7 +46,7 @@ html, body, .container-fluid, .site-background {
 }
 
 .site-background {
-    background: url("dark_embroidery.png");
+    background: url("images/dark_embroidery.png");
     width: inherit;
 }
 
